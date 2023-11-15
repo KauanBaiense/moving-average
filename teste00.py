@@ -23,10 +23,11 @@ def fazTudo(lista):
 
 vetor = []
 lista = []
-m1 = []
-m2 = []
-num1 = 0
-num2 = 0
+tendencia = []
+vetor1 = []
+vetor2 = []
+number1 = 0
+number2 = 0
 
 c = int(input('Usar seus dados 1-SIM ou 0-NAO: '))
 if c != 0:
@@ -42,35 +43,58 @@ if c != 0:
 
 teste = [4.159,4.1293,4.0841,4.0556,4.1071,4.0954,4.1104,4.1095,4.1097,4.1293]
 
-m1, num1 = fazTudo(teste.copy())
-m2, num2 = fazTudo(teste.copy())
+vetor1, number1 = fazTudo(teste.copy())
+vetor2, number2 = fazTudo(teste.copy())
+'''
+formatted_vetor1 = [f'{valor:.4f}' for valor in vetor1]
+formatted_vetor2 = [f'{valor:.4f}' for valor in vetor2]
 
-formatted_m1 = [f'{valor:.4f}' for valor in m1]
-formatted_m2 = [f'{valor:.4f}' for valor in m2]
-
-print(formatted_m1)
+print(formatted_vetor1)
 print('---------------')
-print(formatted_m2)
-print(num1)
-print(num2)
-dif = abs(num1 - num2)
+print(formatted_vetor2)
+print(number1)
+print(number2)
+'''
+dif = abs(number1 - number2)
 
-if num1 < num2:
-    m2 = m1[:dif] + m2
+if number1 < number2:
+    vetor2 = vetor1[:dif] + vetor2
 else:
-    m1 = m2[:dif] + m1
+    vetor1 = vetor2[:dif] + vetor1
 
-for i in range(len(m1)):
-    if m1[i]<m2[i]:
+for i in range(len(vetor1)):
+    if vetor1[i] > vetor2[i]:
+        tendencia.append('alta')
+    elif vetor1[i] < vetor2[i]:
+        tendencia.append('queda')
+    else:
+        tendencia.append('constante')
+
+for i in range(len(tendencia) - 1):
+    if tendencia[i] == tendencia[i+1]:
+        if tendencia[i] == 'queda':
+            tendencia[i+1] = 'queda constante'
+        elif tendencia[i] == 'alta':
+            tendencia[i+1] = 'alta constante'
+
+for i in range(len(tendencia) - 1):
+    if tendencia[i] == 'queda constante' and tendencia[i+1] == 'queda':
+        tendencia[i+1] = 'queda constante'
+    elif tendencia[i] == 'alta constante' and tendencia[i+1] == 'alta':
+        tendencia[i+1] = 'alta constante'
         
 
+
+for i in range(len(tendencia)):
+    print(f'{tendencia[i]}',end=' ')
+    print()
 
 
 print('---------------------------------------------------------')
 print( )
-formatted_m1 = [f'{valor:.4f}' for valor in m1]
-formatted_m2 = [f'{valor:.4f}' for valor in m2]
+formatted_vetor1 = [f'{valor:.4f}' for valor in vetor1]
+formatted_vetor2 = [f'{valor:.4f}' for valor in vetor2]
 
-print(formatted_m1)
+print(formatted_vetor1)
 print('---------------')
-print(formatted_m2)
+print(formatted_vetor2)
