@@ -37,7 +37,10 @@ def mostraMatriz(matriz,a,num):
         print()
 
 dadosss = [1,2,3,4,5,6,7,8,9,10]
-dados = [4.159,4.1293,4.0841,4.0556,4.1071,4.0954,4.1104,4.1095,4.1097,4.1293]
+dadossss = [4.159,4.1293,4.0841,4.0556,4.1071,4.0954,4.1104,4.1095,4.1097,4.1293]
+
+with open('data.txt', 'r') as file:
+    dados = [float(line.strip()) for line in file]
 n = 5
 
 mediaMovel, num = fazTudo(dados, n)
