@@ -1,3 +1,5 @@
+import os
+os.system('cls')
 def fazTudo(lista, num):
     somat = []
     milei = []
@@ -30,15 +32,28 @@ def fazTudo(lista, num):
         somat.append(soma / num)
     
     return somat, num
-
+os.system('cls')
 dados = []
+escolha = str(input('Deseja utilizar os dados em .txt ou entrada manual?\nSe sim digite: s\nSenão digite: n\n: '))
+
 
 with open('data.txt', 'r') as arquivo:
     for linha in arquivo:
         numero = float(linha.strip())
         dados.append(numero)
-n1 = 5
-n2 = 3
+    
+while True:
+    try:
+        n1 = int(input('Digite um parametro para a média móvel: '))
+        n2 = int(input('Digite um parametro para a média móvel: '))
+        if n1> 0 and n2 > 0:
+            break
+        else:
+            print("Digite valores inteiros maiores que zero.")
+    except ValueError:
+        print("Digite valores inteiros maiores que zero.")
+            
+
 mediaMovel1, n1 = fazTudo(dados, n1)
 mediaMovel2, n2 = fazTudo(dados, n2)
 if n1>n2:
