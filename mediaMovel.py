@@ -1,5 +1,3 @@
-import os
-os.system('cls')
 def fazTudo(lista, num):
     somat = []
     milei = []
@@ -32,27 +30,40 @@ def fazTudo(lista, num):
         somat.append(soma / num)
     
     return somat, num
-os.system('cls')
+
 dados = []
-escolha = str(input('Deseja utilizar os dados em .txt ou entrada manual?\nSe sim digite: s\nSenão digite: n\n: '))
-
-
-with open('data.txt', 'r') as arquivo:
-    for linha in arquivo:
-        numero = float(linha.strip())
-        dados.append(numero)
-    
+while True:
+    escolha = str(input('Deseja utilizar os dados em .txt? Digite-1\nOu deseja utilizar a entrada manual? Digite-0\n: '))
+    if escolha == '1':
+        with open("data.txt", "r") as arquivo:
+            for elemento in arquivo:
+                elemento = float(elemento.lstrip())
+                dados.append(elemento)
+        break
+    elif escolha =='0':
+        print("Digite 'fim' para encerrar")
+        colombia = input("Digita ai: ")
+        while colombia.lower() != 'fim':
+            try:
+                dados.append(float(colombia))
+            except ValueError:
+                print('Digite um valor valido!!')
+            colombia = input("Digita ai: ")
+        break
+    else:
+        print('Digite um valor valido!!')
 while True:
     try:
         n1 = int(input('Digite um parametro para a média móvel: '))
         n2 = int(input('Digite um parametro para a média móvel: '))
         if n1> 0 and n2 > 0:
             break
+        elif n2> 0 and n1> 0:
+            break
         else:
             print("Digite valores inteiros maiores que zero.")
     except ValueError:
         print("Digite valores inteiros maiores que zero.")
-            
 
 mediaMovel1, n1 = fazTudo(dados, n1)
 mediaMovel2, n2 = fazTudo(dados, n2)
@@ -68,6 +79,7 @@ if n1>n2:
 for i in range(len(mediaMovel1)):
     mediaMovel1[i] = round(mediaMovel1[i],4)
     mediaMovel2[i] = round(mediaMovel2[i],4)
+    dados[i] = round(dados[i],4)
 
 print(mediaMovel1)
 print(mediaMovel2)
@@ -108,5 +120,3 @@ with open("saida.txt", "w") as arquivo:
         MM1 = str(mediaMovel1[i])
         MM2 = str(mediaMovel2[i])
         arquivo.write(f"{numeros:<15}{MM1:<15}{MM2:<15}{tendencia[i]}\n")
-
-print("Saída gravada em 'saida.txt'.")
