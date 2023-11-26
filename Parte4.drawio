@@ -1,9 +1,63 @@
-<mxfile host="app.diagrams.net" modified="2023-11-26T02:14:25.939Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" version="22.1.4" etag="_Oh6LoQT4iO7amJ4E4AN" type="github">
+<mxfile host="app.diagrams.net" modified="2023-11-26T02:39:23.931Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="yPOwPq63kKWNts452njE" version="22.1.4" type="github">
   <diagram name="Página-1" id="gai0iji7muhxfKvl1AgR">
-    <mxGraphModel>
+    <mxGraphModel dx="880" dy="2822" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="N489NElOygrQdoBAMxFg-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="N489NElOygrQdoBAMxFg-1" target="N489NElOygrQdoBAMxFg-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N489NElOygrQdoBAMxFg-1" value="D" style="shape=offPageConnector;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="385.87" y="-2310" width="56.25" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="N489NElOygrQdoBAMxFg-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="N489NElOygrQdoBAMxFg-3" target="N489NElOygrQdoBAMxFg-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N489NElOygrQdoBAMxFg-3" value="with open(&quot;saida.txt&quot;, &quot;w&quot;) as arquivo" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="309" y="-2230" width="210" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="N489NElOygrQdoBAMxFg-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="N489NElOygrQdoBAMxFg-9" target="N489NElOygrQdoBAMxFg-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N489NElOygrQdoBAMxFg-9" value="arquivo.write(f&quot;DADOS{&#39; &#39;:&amp;lt;10}MM{n1}{&#39; &#39;:&amp;lt;12}MM{n2}{&#39; &#39;:&amp;lt;12}TENDENCIA\n&quot;)&lt;br&gt;arquivo.write(&quot;-&quot; * 65 + &quot;\n&quot;)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="189" y="-2140" width="450" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N489NElOygrQdoBAMxFg-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="N489NElOygrQdoBAMxFg-11" target="N489NElOygrQdoBAMxFg-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="N489NElOygrQdoBAMxFg-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="N489NElOygrQdoBAMxFg-11" target="N489NElOygrQdoBAMxFg-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="-2020" />
+              <mxPoint x="640" y="-1810" />
+              <mxPoint x="414" y="-1810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N489NElOygrQdoBAMxFg-11" value="i = 0; i &amp;lt; dados; i++" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="327" y="-2040" width="173.19" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="N489NElOygrQdoBAMxFg-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="N489NElOygrQdoBAMxFg-13" target="N489NElOygrQdoBAMxFg-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="414" y="-1840" />
+              <mxPoint x="190" y="-1840" />
+              <mxPoint x="190" y="-2020" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N489NElOygrQdoBAMxFg-13" value="data = str(dados[i]) &lt;br&gt;MM1 = str(mediaMovel1[i]) &lt;br&gt;MM2 = str(mediaMovel2[i])&lt;br&gt;arquivo.write(f&quot;{data:&amp;lt;15}{MM1:&amp;lt;15}{MM2:&amp;lt;15}{tendencia[i]}\n&quot;)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="242" y="-1960" width="344" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="N489NElOygrQdoBAMxFg-17" value="FIM" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="359" y="-1773" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="N489NElOygrQdoBAMxFg-22" value="SIM" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="410" y="-2000" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="N489NElOygrQdoBAMxFg-23" value="NÃO" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="490" y="-2040" width="50" height="30" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
